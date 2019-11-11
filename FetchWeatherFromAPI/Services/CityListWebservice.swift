@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlacesService {
+class CityListWebservice {
     
     static func getPlacesList(completion: @escaping ([String]?) -> ()) {
         

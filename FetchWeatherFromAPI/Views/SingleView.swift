@@ -36,7 +36,6 @@ struct SingleView: View {
                 
                 Button(action: {
                     self.weatherVM.search()
-                    print("Search for weather from API")
                 }, label: {
                     Text("Get")
                         .padding(.all, 10)

@@ -15,7 +15,7 @@ struct MainListView: View {
     @State var newCityEntryIsPresented: Bool = false
     
     private func synchronizeList() {
-        PlacesService.getPlacesList { list in
+        CityListWebservice.getPlacesList { list in
             if let list = list {
                 self.cities = list
             }
@@ -34,7 +34,7 @@ struct MainListView: View {
                     
                 }.onDelete { indexSet in
                     for i in indexSet {
-                        PlacesService.mutateOnlinePlaceList(city: self.cities[i], delete: true)
+                        CityListWebservice.mutateOnlinePlaceList(city: self.cities[i], delete: true)
                     }
                     self.cities.remove(atOffsets: indexSet)
                     
@@ -47,7 +47,7 @@ struct MainListView: View {
                 , trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
             .sheet(isPresented: $newCityEntryIsPresented, content: { NewCityEntry(newCityEntryIsPresented: self.$newCityEntryIsPresented, addCity: { city in
                 self.cities.append(city)
-                PlacesService.mutateOnlinePlaceList(city: city, delete: false)
+                CityListWebservice.mutateOnlinePlaceList(city: city, delete: false)
             })
             })
         }.onAppear(perform: synchronizeList)

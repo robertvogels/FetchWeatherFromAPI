@@ -11,8 +11,16 @@ import SwiftUI
 
 struct MainListView: View {
     
-    @State var cities: [String]
+    @State var cities: [String] = []
     @State var newCityEntryIsPresented: Bool = false
+    
+    private func synchronizeList() {
+        PlacesService.getPlacesList { list in
+            if let list = list {
+                self.cities = list
+            }
+        }
+    }
     
     var body: some View {
 
@@ -34,13 +42,15 @@ struct MainListView: View {
 
             }
             .navigationBarTitle("Temperatures")
-            .navigationBarItems(trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
+            .navigationBarItems(leading:
+                Button(action: { self.synchronizeList() }, label: { Text("Sync") } )
+                , trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
             .sheet(isPresented: $newCityEntryIsPresented, content: { NewCityEntry(newCityEntryIsPresented: self.$newCityEntryIsPresented, addCity: { city in
                 self.cities.append(city)
                 PlacesService.mutateOnlinePlaceList(city: city, delete: false)
             })
             })
-        }
+        }.onAppear(perform: synchronizeList)
         
     }
     

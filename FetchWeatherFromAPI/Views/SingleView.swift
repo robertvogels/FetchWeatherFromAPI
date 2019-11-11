@@ -26,7 +26,7 @@ struct SingleView: View {
             HStack(alignment: .center) {
                 
                 Text(weatherVM.cityName)
-                    .frame(width: 80, alignment: .leading)
+                    .frame(width: 135, alignment: .leading)
                 
                 Spacer()
                 

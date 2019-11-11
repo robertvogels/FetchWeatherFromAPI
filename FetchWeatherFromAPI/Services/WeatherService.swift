@@ -7,6 +7,7 @@
 //
 // 1. @escaping? Waarom wordt het gebruikt
 // 2. Waarom moet het resultaat expliciet op de main thread?
+// (2) URLSession wordt standaard op de background thread uitgevoerd. Als je iets wilt veranderen op de UI moet dat op de main
 // 3. Wat is de functie van de .resume() ?
 
 import Foundation

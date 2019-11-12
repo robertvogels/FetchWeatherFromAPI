@@ -39,7 +39,7 @@ struct NewCityEntry: View {
                             self.newCityEntryIsPresented = false
                         }
 
-                    }, label: {Text("Add City")}).foregroundColor(.green)
+                    }, label: {Text("Add")}).foregroundColor(.green)
                     
                 }
                 

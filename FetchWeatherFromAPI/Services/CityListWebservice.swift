@@ -69,6 +69,28 @@ class CityListWebservice {
             }
             
         }.resume()
+        
+    }
+    
+    static func clearOnlineList(completion: @escaping (Bool?) -> ()) {
+        
+        
+        guard let url = URL(string: "https://reinvented-postage.glitch.me/clearweatherplaces") else {
+            print("url-error")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if error == nil {
+                completion(true)
+                return
+            } else {
+                completion(false)
+                return
+            }
+        }.resume()
+        
     }
     
 }

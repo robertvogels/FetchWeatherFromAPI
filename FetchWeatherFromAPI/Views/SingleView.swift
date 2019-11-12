@@ -30,14 +30,16 @@ struct SingleView: View {
                 
                 Spacer()
                 
-                Text(weatherVM.temperature)
+                Text(weatherVM.temperature).fontWeight(.thin)
                 
                 Spacer()
                 
                 Button(action: {
                     self.weatherVM.search()
                 }, label: {
-                    Text("Get")
+                    Text("⏎")
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
                         .padding(.all, 10)
                         .background(Color.blue)
                         .foregroundColor(Color.white)

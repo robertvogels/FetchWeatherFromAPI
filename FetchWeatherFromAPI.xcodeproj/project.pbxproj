@@ -20,6 +20,7 @@
 		E13BC5552373043C002C830D /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC5542373043C002C830D /* SingleView.swift */; };
 		E13BC55723735307002C830D /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC55623735307002C830D /* MainListView.swift */; };
 		E13BC55923758480002C830D /* NewCityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC5582375847F002C830D /* NewCityEntry.swift */; };
+		E148A222237A103C00F697E9 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A221237A103C00F697E9 /* OptionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E13BC5542373043C002C830D /* SingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
 		E13BC55623735307002C830D /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		E13BC5582375847F002C830D /* NewCityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCityEntry.swift; sourceTree = "<group>"; };
+		E148A221237A103C00F697E9 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E13BC55623735307002C830D /* MainListView.swift */,
+				E148A221237A103C00F697E9 /* OptionsView.swift */,
 				E13BC5542373043C002C830D /* SingleView.swift */,
 				E13BC5582375847F002C830D /* NewCityEntry.swift */,
 			);
@@ -207,6 +210,7 @@
 				E11F52742372E49700482E64 /* AppDelegate.swift in Sources */,
 				E11F52762372E49700482E64 /* SceneDelegate.swift in Sources */,
 				E13BC5552373043C002C830D /* SingleView.swift in Sources */,
+				E148A222237A103C00F697E9 /* OptionsView.swift in Sources */,
 				E11F52782372E49700482E64 /* ContentView.swift in Sources */,
 				E13BC55923758480002C830D /* NewCityEntry.swift in Sources */,
 			);

@@ -13,6 +13,7 @@ struct MainListView: View {
     
     @State var cities: [String] = []
     @State var newCityEntryIsPresented: Bool = false
+    @State var optionsIsPresented: Bool = false
     
     private func synchronizeList() {
         CityListWebservice.getPlacesList { list in
@@ -26,30 +27,35 @@ struct MainListView: View {
 
         NavigationView {
             
-            List {
+            VStack {
                 
-                ForEach(0..<cities.count, id: \.self) { index in
+                List {
                     
-                    SingleView(cityName: self.cities[index])
-                    
-                }.onDelete { indexSet in
-                    for i in indexSet {
-                        CityListWebservice.mutateOnlinePlaceList(city: self.cities[i], delete: true)
+                    ForEach(0..<cities.count, id: \.self) { index in
+                        
+                        SingleView(cityName: self.cities[index])
+                        
+                    }.onDelete { indexSet in
+                        for i in indexSet {
+                            CityListWebservice.mutateOnlinePlaceList(city: self.cities[i], delete: true)
+                        }
+                        self.cities.remove(atOffsets: indexSet)
+                        
                     }
-                    self.cities.remove(atOffsets: indexSet)
-                    
-                }
 
+                }
+                .navigationBarTitle("Temperatures")
+                .navigationBarItems(leading:
+                    NavigationLink(destination: OptionsView(cities: $cities)) {
+                        Text("⚙︎").fontWeight(.bold).font(.system(size: 26))}
+                    , trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
+                .sheet(isPresented: $newCityEntryIsPresented, content: { NewCityEntry(newCityEntryIsPresented: self.$newCityEntryIsPresented, addCity: { city in
+                    self.cities.append(city)
+                    CityListWebservice.mutateOnlinePlaceList(city: city, delete: false)
+                })
+                })
+                
             }
-            .navigationBarTitle("Temperatures")
-            .navigationBarItems(leading:
-                Button(action: { self.synchronizeList() }, label: { Text("Sync") } )
-                , trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
-            .sheet(isPresented: $newCityEntryIsPresented, content: { NewCityEntry(newCityEntryIsPresented: self.$newCityEntryIsPresented, addCity: { city in
-                self.cities.append(city)
-                CityListWebservice.mutateOnlinePlaceList(city: city, delete: false)
-            })
-            })
         }.onAppear(perform: synchronizeList)
         
     }

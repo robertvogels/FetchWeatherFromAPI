@@ -21,6 +21,7 @@
 		E13BC55723735307002C830D /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC55623735307002C830D /* MainListView.swift */; };
 		E13BC55923758480002C830D /* NewCityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC5582375847F002C830D /* NewCityEntry.swift */; };
 		E148A222237A103C00F697E9 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A221237A103C00F697E9 /* OptionsView.swift */; };
+		E1E13C3D237A44B90081007A /* TextLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E13C3C237A44B90081007A /* TextLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E13BC55623735307002C830D /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		E13BC5582375847F002C830D /* NewCityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCityEntry.swift; sourceTree = "<group>"; };
 		E148A221237A103C00F697E9 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		E1E13C3C237A44B90081007A /* TextLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				E11F52882372E4F100482E64 /* Weather.swift */,
+				E1E13C3C237A44B90081007A /* TextLabels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				E13BC55623735307002C830D /* MainListView.swift */,
-				E148A221237A103C00F697E9 /* OptionsView.swift */,
 				E13BC5542373043C002C830D /* SingleView.swift */,
 				E13BC5582375847F002C830D /* NewCityEntry.swift */,
+				E148A221237A103C00F697E9 /* OptionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				E148A222237A103C00F697E9 /* OptionsView.swift in Sources */,
 				E11F52782372E49700482E64 /* ContentView.swift in Sources */,
 				E13BC55923758480002C830D /* NewCityEntry.swift in Sources */,
+				E1E13C3D237A44B90081007A /* TextLabels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

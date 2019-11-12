@@ -13,33 +13,33 @@ struct OptionsView: View {
     
     @Binding var cities: [String]
     @State var doneText: String = ""
-    @State var deleteAllText: String = "Delete all items from cloud"
-     
+    @State var deleteAllText: String = textLabels.deleteAll.rawValue
 
     private func setDoneAndResetStatus() {
-        self.doneText = "done"
+        self.doneText = textLabels.done.rawValue
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.doneText = ""
+            self.deleteAllText = textLabels.deleteAll.rawValue
         }
     }
     
     func places() {
-        self.doneText = "..."
+        self.doneText = textLabels.wait.rawValue
         CityListWebservice.getPlacesList { item in
             if let item = item {
                 self.cities = item
                 self.setDoneAndResetStatus()
-            } else { self.doneText = "error" }
+            } else { self.doneText = textLabels.error.rawValue }
         }
     }
     
     func clearList() {
-        self.doneText = "..."
+        self.doneText = textLabels.wait.rawValue
         CityListWebservice.clearOnlineList { bool in
             if bool == true {
                 self.places()
                 self.setDoneAndResetStatus()
-            } else { self.doneText = "error" }
+            } else { self.doneText = textLabels.error.rawValue }
         }
     }
     
@@ -53,7 +53,7 @@ struct OptionsView: View {
                 Section {
                     
                     HStack {
-                        Text("Status:")
+                        Text("Status:").fontWeight(.semibold)
                         Spacer()
                         Text(doneText)
                     }
@@ -62,21 +62,17 @@ struct OptionsView: View {
                 
                 Section {
 
-                    Button(action: places, label: { Text("Synchronise local list with cloud")})
+                    Button(action: places, label: { Text("Synchronize local list with cloud")})
                     
                 }
                 
                 Section {
                     
                     Button(action: {
-                        if (self.deleteAllText == "Sure?") {
+                        if (self.deleteAllText == textLabels.sure.rawValue) {
                             self.clearList()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                self.deleteAllText = "Delete all items from cloud"
-                            }
-                            
                         } else {
-                            self.deleteAllText = "Sure?"
+                            self.deleteAllText = textLabels.sure.rawValue
                         }
                     }, label: { Text(deleteAllText)}).foregroundColor(Color.red)
                     

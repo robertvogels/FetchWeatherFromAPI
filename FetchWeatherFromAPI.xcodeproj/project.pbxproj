@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E11F52742372E49700482E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F52732372E49700482E64 /* AppDelegate.swift */; };
 		E11F52762372E49700482E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F52752372E49700482E64 /* SceneDelegate.swift */; };
-		E11F52782372E49700482E64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F52772372E49700482E64 /* ContentView.swift */; };
 		E11F527A2372E49800482E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11F52792372E49800482E64 /* Assets.xcassets */; };
 		E11F527D2372E49800482E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11F527C2372E49800482E64 /* Preview Assets.xcassets */; };
 		E11F52802372E49800482E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E11F527E2372E49800482E64 /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 		E11F52702372E49700482E64 /* FetchWeatherFromAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchWeatherFromAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11F52732372E49700482E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E11F52752372E49700482E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E11F52772372E49700482E64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E11F52792372E49800482E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11F527C2372E49800482E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E11F527F2372E49800482E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				E11F52872372E4DB00482E64 /* Models */,
 				E11F52732372E49700482E64 /* AppDelegate.swift */,
 				E11F52752372E49700482E64 /* SceneDelegate.swift */,
-				E11F52772372E49700482E64 /* ContentView.swift */,
 				E11F52792372E49800482E64 /* Assets.xcassets */,
 				E11F527E2372E49800482E64 /* LaunchScreen.storyboard */,
 				E11F52812372E49800482E64 /* Info.plist */,
@@ -214,7 +211,6 @@
 				E11F52762372E49700482E64 /* SceneDelegate.swift in Sources */,
 				E13BC5552373043C002C830D /* SingleView.swift in Sources */,
 				E148A222237A103C00F697E9 /* OptionsView.swift in Sources */,
-				E11F52782372E49700482E64 /* ContentView.swift in Sources */,
 				E13BC55923758480002C830D /* NewCityEntry.swift in Sources */,
 				E1E13C3D237A44B90081007A /* TextLabels.swift in Sources */,
 			);

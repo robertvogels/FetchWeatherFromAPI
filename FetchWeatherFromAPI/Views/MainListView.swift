@@ -46,8 +46,7 @@ struct MainListView: View {
                 }
                 .navigationBarTitle("Temperatures")
                 .navigationBarItems(leading:
-                    NavigationLink(destination: OptionsView(cities: $cities)) {
-                        Text("⚙︎").fontWeight(.bold).font(.system(size: 26))}
+                    Button(action:{ self.optionsIsPresented = true }, label: { Text("⚙︎").fontWeight(.bold).font(.system(size: 26))})
                     , trailing: Button(action: { self.newCityEntryIsPresented = true }, label: {Text("Add").fontWeight(.bold)}))
                 .sheet(isPresented: $newCityEntryIsPresented, content: { NewCityEntry(newCityEntryIsPresented: self.$newCityEntryIsPresented, addCity: { city in
                     self.cities.append(city)
@@ -55,6 +54,12 @@ struct MainListView: View {
                 })
                 })
                 
+                // hidden navigationlink (for fixing the back-navigation bug):
+                NavigationLink(destination: OptionsView(cities: $cities), isActive: self.$optionsIsPresented) {
+                    EmptyView()
+                }
+                    .disabled(true)
+                    .hidden()
             }
         }.onAppear(perform: synchronizeList)
         

@@ -80,7 +80,7 @@ struct OptionsView: View {
                 
             }
             
-        }
+        }.navigationBarTitle(Text("Settings"))
             
     }
 }

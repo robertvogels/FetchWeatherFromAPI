@@ -15,4 +15,6 @@ enum textLabels: String {
     case done = "Done"
     case error = "Error!"
     case support = "Call life support: clearly this is bad software design!"
+    case fahrenheitOption = "Display in Fahrenheit"
+    case sync = "Synchronize local list with cloud"
 }

@@ -14,7 +14,9 @@ struct OptionsView: View {
     @Binding var cities: [String]
     @State var doneText: String = ""
     @State var deleteAllText: String = textLabels.deleteAll.rawValue
-
+    
+    @ObservedObject var toggleFahrenheit = OptionsController()
+    
     private func setDoneAndResetStatus() {
         self.doneText = textLabels.done.rawValue
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
@@ -62,7 +64,7 @@ struct OptionsView: View {
                 
                 Section {
 
-                    Button(action: places, label: { Text("Synchronize local list with cloud")})
+                    Button(action: places, label: { Text(textLabels.sync.rawValue) })
                     
                 }
                 
@@ -78,9 +80,16 @@ struct OptionsView: View {
                     
                 }
                 
+                Section {
+                    
+                    Toggle(isOn: $toggleFahrenheit.isOn) {
+                        Text(textLabels.fahrenheitOption.rawValue)
+                    }
+                    
+                }
             }
             
-        }.navigationBarTitle(Text("Settings"))
+        }.navigationBarTitle("Settings", displayMode: .inline)
             
     }
 }

@@ -20,8 +20,12 @@ class WeatherViewModel: ObservableObject {
     }
     
     var temperature: String {
+        
         if let temp = self.weather.temp {
-            return String(format: "%.0f ºC", temp-273.15)
+            if Options.shared.displayInFahrenheit {
+                return String(format: "%.0f ºF", temp * (9 / 5) - 459.67)
+            } else {
+                return String(format: "%.0f ºC", temp-273.15) }
         } else {
             return "N/A"
         }

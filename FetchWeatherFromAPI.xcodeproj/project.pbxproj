@@ -20,6 +20,7 @@
 		E13BC55723735307002C830D /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC55623735307002C830D /* MainListView.swift */; };
 		E13BC55923758480002C830D /* NewCityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC5582375847F002C830D /* NewCityEntry.swift */; };
 		E148A222237A103C00F697E9 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148A221237A103C00F697E9 /* OptionsView.swift */; };
+		E1DC1930239842DC00FEAECA /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC192F239842DC00FEAECA /* Options.swift */; };
 		E1E13C3D237A44B90081007A /* TextLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E13C3C237A44B90081007A /* TextLabels.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		E13BC55623735307002C830D /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		E13BC5582375847F002C830D /* NewCityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCityEntry.swift; sourceTree = "<group>"; };
 		E148A221237A103C00F697E9 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		E1DC192F239842DC00FEAECA /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		E1E13C3C237A44B90081007A /* TextLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 		E11F52722372E49700482E64 /* FetchWeatherFromAPI */ = {
 			isa = PBXGroup;
 			children = (
+				E13AA67E2398650400261B91 /* Controllers */,
 				E13BC55323730426002C830D /* Views */,
 				E13BC5502372FF3E002C830D /* View Models */,
 				E11F528C2372E63C00482E64 /* Services */,
@@ -110,6 +113,14 @@
 				E12C897923787FA100881B91 /* CityListWebservice.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E13AA67E2398650400261B91 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC192F239842DC00FEAECA /* Options.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E13BC5502372FF3E002C830D /* View Models */ = {
@@ -206,6 +217,7 @@
 				E12C897A23787FA100881B91 /* CityListWebservice.swift in Sources */,
 				E13BC55723735307002C830D /* MainListView.swift in Sources */,
 				E13BC5522372FF50002C830D /* WeatherViewModel.swift in Sources */,
+				E1DC1930239842DC00FEAECA /* Options.swift in Sources */,
 				E11F52892372E4F100482E64 /* Weather.swift in Sources */,
 				E11F52742372E49700482E64 /* AppDelegate.swift in Sources */,
 				E11F52762372E49700482E64 /* SceneDelegate.swift in Sources */,

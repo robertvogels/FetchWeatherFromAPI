@@ -89,7 +89,7 @@ struct OptionsView: View {
                 }
             }
             
-        }.navigationBarTitle("Settings", displayMode: .inline)
+            }.navigationBarTitle("Settings", displayMode: .automatic)
             
     }
 }
